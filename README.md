@@ -1,2 +1,2 @@
 # realm2
-项目资源：https://github.com/zephyrchien/realm
+项目地址：https://github.com/zephyrchien/realm
