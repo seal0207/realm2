@@ -1,0 +1,21 @@
+[Unit]
+Description=realm2
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+StandardError=none
+User=root
+LimitAS=infinity
+LimitCORE=infinity
+LimitNOFILE=102400
+LimitNPROC=102400
+ExecStart=/etc/realm2/start-realm2.sh
+ExecReload=/bin/kill -HUP $MAINPID
+ExecStop=/bin/kill $MAINPID
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
